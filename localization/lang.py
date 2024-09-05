@@ -80,17 +80,17 @@ back_to = dict(uz="🔙 Orqaga",
                en="🔙 Back to")
 
 
-select_to = dict(uz="Quyidagilardan tanlang:",
-                 ru="Выберите:",
-                 en="Select:")
+select_to = dict(uz="Quyidagilardan biribi tanlang:",
+                 ru="Выберите один из следующих вариантов:",
+                 en="Choose one of the following:")
 
 fish = dict(uz="FIO yingizni kiriting: ",
             ru="Введите ваше имя: ",
             en="Enter your name: ")
 
-screen = dict(uz="Screenshot yuboring (Eslatma! Fakultet bo’yicha Protestimdagi tanlangan fakultetga mos kelishi lozim): ",
-              ru="Загрузите скриншот (Предупреждение! Выберите факультет для проверки): ",
-              en="Upload screenshot (Warning! Choose the faculty for verification): ")
+screen = dict(uz="Protestim ilovasidan yig'ilgan balingizni screenshotini yuboring:",
+              ru="Отправьте скриншот вашего накопленного балла из приложения Protestim:",
+              en="Send a screenshot of your accumulated score from the Protestim app:")
 
 contact_info = dict(uz="Telefon raqamingizni quyidagi formatda yuboring yoki kiriting: +998 ** *** ** **",
                      ru="Введите ваш номер телефона в следующем формате: +998 ** *** ** **",
