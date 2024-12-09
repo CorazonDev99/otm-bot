@@ -3,7 +3,7 @@ from telebot import TeleBot
 from keyboard import *
 from localization.lang import *
 
-token = "7053553473:AAFa-MWRvNWyjlHfns8ZFAYYYIqb7Y2bJqQ"
+token = "7356555955:AAHq3ZAbISgcQbEwgAEdOw03-XLF7Fxub9s"
 
 bot = TeleBot(token)
 
