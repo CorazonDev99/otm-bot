@@ -3,7 +3,7 @@ from telebot import TeleBot
 from keyboard import *
 from localization.lang import *
 
-token = "7356555955:AAHq3ZAbISgcQbEwgAEdOw03-XLF7Fxub9s"
+token = "8245578736:AAEL7K86vAgN8p0z1EFjBT4f7PM_WnJYh8M"
 
 bot = TeleBot(token)
 
@@ -14,7 +14,7 @@ user_langs = {}
 def start(message):
     chat_id = message.chat.id
     lang = user_langs.get(chat_id, "uz")
-    bot.send_photo(chat_id, open("image/image.jpg", "rb"), caption=start_bot[lang], reply_markup=social("https://play.google.com/store/apps/details?id=uz.testim", "https://apps.apple.com/uz/app/protestim/id1666392601", lang))
+    bot.send_photo(chat_id, "https://fjale.al/fig/protestim.png", caption=start_bot[lang], reply_markup=social("https://play.google.com/store/apps/details?id=uz.testim", "https://apps.apple.com/uz/app/protestim/id1666392601", lang))
     bot.send_message(chat_id, select_to[lang], reply_markup=generate_main_menu(lang))
     bot.register_next_step_handler(message, choose_catalog)
 
@@ -22,6 +22,7 @@ def start(message):
 def choose_catalog(message):
     chat_id = message.chat.id
     lang = user_langs.get(chat_id, "uz")
+    print(message.text)
     if message.text == call[lang]:
         bot.send_photo(chat_id, photo=open("image/img.jpg", "rb"), caption=catalog_lang[lang], reply_markup=generate_connect("https://protestim.olympiada.uz/", "t.me/Akbarikramov0606", lang))
 
@@ -30,7 +31,7 @@ def choose_catalog(message):
         bot.register_next_step_handler(message, languge)
 
 
-    elif message.text == menu_milliy[lang]:
+    elif message.text == '🏫 TIU (Toshkent Xalqaro Universiteti)':
         universitet_name = menu_milliy[lang]
         return send_data(message, universitet_name)
 
@@ -197,7 +198,7 @@ def commit_data(call):
 
     data = user_data.get(chat_id)
     tg_username = call.from_user.username
-    channel_id = -1002171342653
+    channel_id = -1003584430858
 
     if call.data == "confirm":
         bot.send_message(chat_id, commit_message[lang])
