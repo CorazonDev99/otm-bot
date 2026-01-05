@@ -195,6 +195,7 @@ def commit_contact(message, first_file_id, second_file_id, fio, universitet_name
 def commit_data(call):
     chat_id = call.message.chat.id
     lang = user_langs.get(chat_id, "uz")
+    print("Hello world")
 
     data = user_data.get(chat_id)
     tg_username = call.from_user.username
